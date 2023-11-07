@@ -3,7 +3,20 @@ import InputValidation as gtValid
 
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
-currentStudents = []
+currentStudents = [
+    {'name': 'Claude',
+     'grades': {
+        'Maths': 7,
+        'English': 5    
+     }
+     },
+     {'name': 'Jerma',
+     'grades': {
+        'Maths': 6,
+        'English': 9    
+     }
+     }
+    ]
 
 def CreateBarrier() -> None:
     # basic function that prints a barrier made of 100 dashes
