@@ -1,15 +1,23 @@
 import InputValidation as inValid
 
-def GradeAvgStd(grades) -> int:
-    # collects average of a student
-    # student is selected outside of function
-    # student's grades are passed in as arg named 'grades'
+def StdAverages(students) -> dict:
+    for student in students:
+        GradeAvgStd(student)
+    return
+def GradeAvgStd(student) -> int:
+    # function that tallies all grades of a given student and calculates average
+    # no return, just prints the name of student and their grade average
     totalGrade = 0
     i = 0
-    for subject in grades:
-        totalGrade += grades[subject]
+    for grade in student['grades']:
+        try:
+            totalGrade += int(student['grades'][grade])
+        except:
+            print('Error')
         i += 1
-    return totalGrade/i
+    print('Average grade of %s: %s' % (student.get('name'), (totalGrade/i)))
+    return
+
 def GradeAvgSbj(subject, students) -> int:
     # function to collect avg subject grade per student
     # 'students' parameters are all student dicts w/ corresponding 'subject'

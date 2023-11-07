@@ -48,7 +48,7 @@ def AverageGradesMenu() -> None:
             continue
     match choice:
         case 1:
-            print('stuck urself fool')
+            gtDict.StdAverages(currentStudents)
         case 2:
             print('stuck urself fool')
         case 0:
