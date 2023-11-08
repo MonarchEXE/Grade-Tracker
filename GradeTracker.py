@@ -1,10 +1,10 @@
 import InputValidation as inValid
 
-def StdAverages(students) -> dict:
+def StudentAvgs(students) -> dict:
     for student in students:
-        GradeAvgStd(student)
+        StudentAvg(student)
     return
-def GradeAvgStd(student) -> int:
+def StudentAvg(student) -> int:
     # function that tallies all grades of a given student and calculates average
     # no return, just prints the name of student and their grade average
     totalGrade = 0
@@ -18,7 +18,7 @@ def GradeAvgStd(student) -> int:
     print('Average grade of %s: %s' % (student.get('name'), (totalGrade/i)))
     return
 
-def GradeAvgSbj(subject, students) -> int:
+def SubjectAvg(subject, students) -> int:
     # function to collect avg subject grade per student
     # 'students' parameters are all student dicts w/ corresponding 'subject'
     # e.g., all students have 'Physics' as a tracked subject   

@@ -3,7 +3,20 @@ import InputValidation as gtValid
 
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
-currentStudents = []
+currentStudents = [
+    {'name': 'Claude',
+     'grades': {
+        'Maths': 7,
+        'English': 5    
+     }
+     },
+     {'name': 'Jerma',
+     'grades': {
+        'Maths': 6,
+        'English': 9    
+     }
+     }
+    ]
 
 def CreateBarrier() -> None:
     # basic function that prints a barrier made of 100 dashes
@@ -48,7 +61,7 @@ def AverageGradesMenu() -> None:
             continue
     match choice:
         case 1:
-            gtDict.StdAverages(currentStudents)
+            gtDict.StudentAvgs(currentStudents)
         case 2:
             print('stuck urself fool')
         case 0:
@@ -86,7 +99,7 @@ def MainMenu() -> None:
     print('Welcome to Student Grade Tracker!')
     print('Select an option: ')
     print('    1. Create a new student datasheet.')
-    print('    2. Access a student\'s grades.')
+    print('    2. Access a student\'s datasheet.')
     print('    3. Find grade averages.')
     print('    4. Save current changes.')
     print('    0. Exit Program.')
@@ -109,6 +122,8 @@ def MainMenu() -> None:
             AccessGradesMenu()
         case 3:
             AverageGradesMenu()
+        case 4:
+            print('Not Available at the moment.')
         case 0:
             return
 
