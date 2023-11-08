@@ -12,7 +12,7 @@ GradeTracker     - contains functions handling main program features
 InputValidation  - handles the validation of user inputs (the ones that aren't pre-
                    defined i.e. subject grades)
 FileSave         - handles saving student data to a json file. Also handles updating 
-                 - currentStudents to contain previous data
+                   currentStudents to contain previous data
 Prog             - the cmd UI of the program (not actually the main program)
                    handles  user input  
 MainProg         - WORK IN PROGRESS - The GUI of the porgram, via Tkinter lib. I have
