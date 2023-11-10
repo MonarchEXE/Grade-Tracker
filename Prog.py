@@ -1,6 +1,6 @@
 import GradeTracker as gtDict
 import InputValidation as gtValid
-
+import GradeAvgs as gtAvgs
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
 currentStudents = [
@@ -61,9 +61,11 @@ def AverageGradesMenu() -> None:
             continue
     match choice:
         case 1:
-            gtDict.StudentAvgs(currentStudents)
+            title = 'Grade Averages per Subject'
+            print("Work in progess...")
         case 2:
-            print('stuck urself fool')
+            title = 'Grade Averages per Subject'
+            gtAvgs.TblDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollSubjectGrades)
         case 0:
             pass
     MainMenu()
