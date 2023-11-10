@@ -1,5 +1,4 @@
 import GradeTracker as gtDict
-import InputValidation as gtValid
 import GradeAvgs as gtAvgs
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
