@@ -1,3 +1,6 @@
 #.gitignore to untrack files in repo
 #__pycache__ kept local, not uploaded to repo
 __pycache__/
+#.vscode used to debug in external terminal
+# unknown launch.json compatible with other editors 
+.vscode/
