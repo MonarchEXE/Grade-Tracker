@@ -1,5 +1,7 @@
 import GradeTracker as gtDict
 import GradeAvgs as gtAvgs
+import TblDisplay as gtDisplay
+
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
 currentStudents = [
@@ -64,7 +66,7 @@ def AverageGradesMenu() -> None:
             print("Work in progess...")
         case 2:
             title = 'Grade Averages per Subject'
-            gtAvgs.TblDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollSubjectGrades)
+            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollSubjectGrades)
         case 0:
             pass
     MainMenu()
