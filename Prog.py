@@ -62,8 +62,8 @@ def AverageGradesMenu() -> None:
             continue
     match choice:
         case 1:
-            title = 'Grade Averages per Subject'
-            print("Work in progess...")
+            title = 'Grade Averages per Student'
+            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollStudentGrades)
         case 2:
             title = 'Grade Averages per Subject'
             gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollSubjectGrades)
