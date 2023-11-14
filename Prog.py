@@ -63,10 +63,10 @@ def AverageGradesMenu() -> None:
     match choice:
         case 1:
             title = 'Grade Averages per Student'
-            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollStudentGrades)
+            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.StudentGrades)
         case 2:
             title = 'Grade Averages per Subject'
-            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.CollSubjectGrades)
+            gtDisplay.DisplayGrades(currentStudents,title,gtAvgs.SubjectGrades)
         case 0:
             pass
     MainMenu()
