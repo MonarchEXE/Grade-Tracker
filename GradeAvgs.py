@@ -33,7 +33,7 @@ def SubjectGrades(students):
     for student in students:
         AddSubjectKeys(student, listGrades)
         CollSubjectGrades(student['grades'], listGrades)
-        AvgGrades(listGrades, gradeAvgs)
+    AvgGrades(listGrades, gradeAvgs)
     return gradeAvgs
 
 def StudentGrades(students):
@@ -42,6 +42,6 @@ def StudentGrades(students):
     for student in students:
         AddStudentKeys(student, listGrades)
         CollStudentGrades(student.get('grades'),listGrades,student.get('name'))
-        AvgGrades(listGrades, gradeAvgs)
+    AvgGrades(listGrades, gradeAvgs)
     return gradeAvgs
 
