@@ -1,7 +1,3 @@
-import ctypes
-# module used to display error messages on a small pop-up window
-# to reduce the clutter displayed on the terminal 
-
 class GradeInput:
    def ValidInput() -> int:
         valid = False
@@ -16,7 +12,7 @@ class GradeInput:
    def ValueCheck(value) -> bool:
        #checks if the grade is within valid values
         if(int(value) < 0 or int(value) > 100):
-            ctypes.windll.user32.MessageBoxW(None, u'Enter a valid grade.', u'Error', None)
+            print('\nEnter a valid grade.\n')
             # MessageBoxW displays a message box with a given title and message
             # arg 2 is the message, arg 3 is the title
             return False
@@ -28,5 +24,5 @@ class GradeInput:
             value = int(value)
             return True
         except:
-            ctypes.windll.user32.MessageBoxW(None, u'Invalid input.', u'Error', None)
+            print('\nInvalid input.\n')
             return False
