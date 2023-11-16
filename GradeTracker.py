@@ -53,6 +53,8 @@ def AlterStudentGrade(students) -> dict:
     if(student == None or subject == None):
         return students
     grade = inValid.GradeInput.ValidInput()
+    if(grade == None):
+        return students
     # finds index of selected student, and overwrites the index with the student dict
     # with updated grade
     students[students.index(student)] = UpdateGrade(student, subject, grade)

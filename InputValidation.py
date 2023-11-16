@@ -1,20 +1,14 @@
 class GradeInput:
    def ValidInput() -> int:
-        valid = False
-        grade = 0
-        while(valid == False):
-            # continuously asks the user for a grade until a valid grade is entered
-            grade = input('Enter subject grade: ')
-            if(GradeInput.TypeCheck(grade) == False or GradeInput.ValueCheck(grade) == False):
-                continue
-            valid = True
+        grade = input('Enter subject grade: ')
+        if(GradeInput.TypeCheck(grade) == False or GradeInput.ValueCheck(grade) == False):
+            return None
+        valid = True
         return int(grade)
    def ValueCheck(value) -> bool:
        #checks if the grade is within valid values
         if(int(value) < 0 or int(value) > 100):
             print('\nEnter a valid grade.\n')
-            # MessageBoxW displays a message box with a given title and message
-            # arg 2 is the message, arg 3 is the title
             return False
         return True
    def TypeCheck(value) -> bool:
