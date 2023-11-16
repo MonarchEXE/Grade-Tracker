@@ -4,3 +4,5 @@ __pycache__/
 #.vscode used to debug in external terminal
 # unknown launch.json compatible with other editors 
 .vscode/
+#folder to be created and stored locally, not pushed to repo
+saves/

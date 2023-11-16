@@ -1,6 +1,7 @@
 import GradeTracker as gtDict
 import GradeAvgs as gtAvgs
 import TblDisplay as gtDisplay
+import FileSave as gtFile
 
 # list to locally hold all current students
 # listed with a nested dict that has nested dicts
@@ -97,6 +98,32 @@ def AccessGradesMenu():
             pass
     MainMenu()
 
+def SaveData():
+    CreateBarrier()
+    print('Select an option:')
+    print('    1. Save current changes to student datasheets.')
+    print('    2. Load previous student datasheets.')
+    print('    0. Exit to main menu.')
+    print()
+    choice = -1
+    while(choice < 0 or choice > 2):
+        try:
+            choice = int(input('Enter Option: '))
+        except:
+            print('Invalid input')
+            continue
+        if(choice < 0 or choice > 2):
+            print('Enter a valid choice')
+            continue
+    match choice:
+        case 1:
+            gtFile.SaveData(currentStudents)
+        case 2:
+            gtFile.LoadData(currentStudents)
+        case 0:
+            pass
+    MainMenu()
+
 def MainMenu() -> None:
     CreateBarrier()
     print('Welcome to Student Grade Tracker!')
@@ -104,7 +131,7 @@ def MainMenu() -> None:
     print('    1. Create a new student datasheet.')
     print('    2. Access a student\'s datasheet.')
     print('    3. Find grade averages.')
-    print('    4. Save current changes.')
+    print('    4. Save/Load student datasheets.')
     print('    0. Exit Program.')
     print()
 
@@ -126,8 +153,9 @@ def MainMenu() -> None:
         case 3:
             AverageGradesMenu()
         case 4:
-            print('Not Available at the moment.')
+            SaveData()
         case 0:
             return
 
+gtFile.CreatePath()
 MainMenu()
