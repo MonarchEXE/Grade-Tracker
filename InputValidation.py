@@ -16,7 +16,7 @@ class GradeInput:
    def ValueCheck(value) -> bool:
        #checks if the grade is within valid values
         if(int(value) < 0 or int(value) > 100):
-            raise Exception(ctypes.windll.user32.MessageBoxW(None, u'Enter a valid grade.', u'Error', None))
+            ctypes.windll.user32.MessageBoxW(None, u'Enter a valid grade.', u'Error', None)
             # MessageBoxW displays a message box with a given title and message
             # arg 2 is the message, arg 3 is the title
             return False
