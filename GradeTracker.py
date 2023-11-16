@@ -49,12 +49,13 @@ def AddSubjects(subjects) -> dict:
     return gradesDict
 
 def AlterStudentGrade(students) -> dict:
-    student = GetStudent(students)
-    stdSubject = input('Enter subject: ')
+    student, subject = GetSubject(students)
+    if(student == None or subject == None):
+        return students
     grade = inValid.GradeInput.ValidInput()
     # finds index of selected student, and overwrites the index with the student dict
     # with updated grade
-    students[students.index(student)] = UpdateGrade(student, stdSubject,grade)
+    students[students.index(student)] = UpdateGrade(student, subject, grade)
     # returning it updates currentStudents without 
     return students
 def UpdateGrade(student, subject, grade) -> None: 
@@ -78,3 +79,14 @@ def GetStudent(students) -> dict:
         else:
             return student
     return None
+def GetSubject(_students) -> str:
+    student = GetStudent(_students)
+    if(student == None):
+        print('\nStudent not found.\n')
+        return None, None
+    subject = input('Enter subject: ')
+    for _subject in student['grades'].keys():
+        if(subject == _subject):
+            return student, _subject
+    print('\nSubject not found.\n')
+    return student, None

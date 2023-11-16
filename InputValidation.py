@@ -12,7 +12,7 @@ class GradeInput:
             if(GradeInput.TypeCheck(grade) == False or GradeInput.ValueCheck(grade) == False):
                 continue
             valid = True
-        return grade
+        return int(grade)
    def ValueCheck(value) -> bool:
        #checks if the grade is within valid values
         if(int(value) < 0 or int(value) > 100):
