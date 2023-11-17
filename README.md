@@ -5,6 +5,7 @@ json file in .vscode is just to debug the program on a cmd terminal instead of t
 in vs code. The four files listed below are the only ones of importance
 
 File purposes:
+.gitignore       - list of files and directories that are ignored by git in commits
 GradeTracker     - contains functions handling main program features
                    (creating student dictionaries, altering grades, averaging, etc.)
                    note: I *would* put the functions into classes w/ related titles
@@ -12,10 +13,7 @@ GradeTracker     - contains functions handling main program features
 InputValidation  - handles the validation of user inputs (the ones that aren't pre-
                    defined i.e. subject grades)
 FileSave         - handles saving student data to a json file. Also handles updating 
-                   currentStudents to contain previous data
+                   currentStudents to contain previous data.
 Prog             - the cmd UI of the program (not actually the main program)
-                   handles  user input  
-MainProg         - WORK IN PROGRESS - The GUI of the porgram, via Tkinter lib. I have
-                   no clue how tf do Tkinter yet nor do I have a design deadass a waste
-                   to look over
-                   note: no longer here for now
+                   handles user input  
+
