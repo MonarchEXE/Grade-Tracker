@@ -40,6 +40,8 @@ def StudentGrades(students):
     listGrades = {} # hold grade totals as student name : [total grade, count] pairs
     gradeAvgs = {} # holds grade avgs as student name : grade pairs
     for student in students:
+        if(len(student['grades'].values()) == 0):
+            continue # skips student if they have no grades being tracked
         AddStudentKeys(student, listGrades)
         CollStudentGrades(student.get('grades'),listGrades,student.get('name'))
     AvgGrades(listGrades, gradeAvgs)
