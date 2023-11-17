@@ -49,8 +49,7 @@ def AverageGradesMenu() -> None:
     print('Select an option:')
     print('    1. Find average grades per student.')
     print('    2. Find average grades per subject.')
-    print('    0. Exit to main menu.')
-    print()
+    print('    0. Exit to main menu.\n')
     choice = -1
     while(choice < 0 or choice > 2):
         try:
@@ -59,7 +58,7 @@ def AverageGradesMenu() -> None:
             print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice')
+            print('Enter a valid choice.')
             continue
     match choice:
         case 1:
@@ -78,8 +77,7 @@ def AccessGradesMenu():
     print('Select an option:')
     print('    1. Alter a student\'s subject grade.')
     print('    2. Display all student\'s grades.')
-    print('    0. Exit to main menu.')
-    print()
+    print('    0. Exit to main menu.\n')
     choice = -1
     while(choice < 0 or choice > 2):
         try:
@@ -88,7 +86,7 @@ def AccessGradesMenu():
             print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice')
+            print('Enter a valid choice.')
             continue
     match choice:
         case 1:
@@ -105,8 +103,7 @@ def SaveData():
     print('Select an option:')
     print('    1. Save current changes to student datasheets.')
     print('    2. Load previous student datasheets.')
-    print('    0. Exit to main menu.')
-    print()
+    print('    0. Exit to main menu.\n')
     choice = -1
     while(choice < 0 or choice > 2):
         try:
@@ -115,13 +112,15 @@ def SaveData():
             print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice')
+            print('Enter a valid choice.')
             continue
     match choice:
         case 1:
             gtFile.SaveData(currentStudents)
+            print('Current datasheets saved.\n')
         case 2:
             gtFile.LoadData(currentStudents)
+            print('Previous datasheets loaded from save directory.\n')
         case 0:
             pass
     MainMenu()
@@ -138,8 +137,7 @@ def MainMenu():
     print('    2. Access a student\'s datasheet.')
     print('    3. Find grade averages.')
     print('    4. Save/Load student datasheets.')
-    print('    0. Exit Program.')
-    print()
+    print('    0. Exit Program.\n')
 
     choice = -1
     while(choice < 0 or choice > 4):
@@ -149,7 +147,7 @@ def MainMenu():
             print('Invalid input.')
             continue
         if(choice < 0 or choice > 4):
-            print('Enter a valid choice')
+            print('Enter a valid choice.')
             continue
     match choice:
         case 1:
