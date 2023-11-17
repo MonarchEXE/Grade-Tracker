@@ -42,7 +42,7 @@ def GradeBar(subject, grade) -> str:
     vBar += ' |'
     print(vBar)
 
-def DisplayGrades(students, title, function) -> None:
+def DisplayAvgs(students, title, function) -> None:
     '''
     function parameter takes a function that collects and calculates grade averages
     function import only needed in Prog() where this function is called.
