@@ -3,6 +3,7 @@ import InputValidation as GradeIn
 def StudentAvg(student) -> int:
     # function that tallies all grades of a given student and calculates average
     # no return, just prints the name of student and their grade average
+    #DELETE
     totalGrade = 0
     i = 0
     for grade in student['grades']:
@@ -17,7 +18,8 @@ def StudentAvg(student) -> int:
 def SubjectAvg(subject, students) -> int:
     # function to collect avg subject grade per student
     # 'students' parameters are all student dicts w/ corresponding 'subject'
-    # e.g., all students have 'Physics' as a tracked subject   
+    # e.g., all students have 'Physics' as a tracked subject 
+    # DELETE  
     totalGrade = 0
     i = 0
     for grade in students:
@@ -34,13 +36,14 @@ def CreateStudent(name, subjects) -> dict:
         # if 'subject' param has a one arg, then it calls AddSubjects
         # grades dict is overwritten w/ return value of AddSubjects
         newDict['grades'] = AddSubjects(subjects)
+    print('\nStudent datasheet created.\n')
     return newDict
 def AddSubjects(subjects) -> dict:
     # function that creates a dictionary of subjects
     # key-value is { subject : grade }
     gradesDict = {}
     for subject in subjects:
-        gradesDict[subject] = None
+        gradesDict.update({subject : 0})
     print(gradesDict) # test code, remember to delete
     return gradesDict
 
@@ -57,10 +60,12 @@ def AlterStudentGrade(students) -> dict:
     # returning it updates currentStudents without 
     return students
 def UpdateGrade(student, subject, grade) -> None: 
-    student['grades'][subject] = grade
+    student['grades'].update({subject : grade})
+    print('\nGrade updated\n')
     return student
 
 def GetStudentGrades(students):
+    # DELETE
     student = GetStudent(students) 
     if(student == None):
         print('Student not found.')
