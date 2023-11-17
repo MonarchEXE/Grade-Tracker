@@ -1,4 +1,4 @@
-import InputValidation as inValid
+import InputValidation as GradeIn
 
 def StudentAvgs(students) -> dict:
     for student in students:
@@ -52,7 +52,7 @@ def AlterStudentGrade(students) -> dict:
     student, subject = GetSubject(students)
     if(student == None or subject == None):
         return students
-    grade = inValid.GradeInput.ValidInput()
+    grade = GradeIn.ValidInput()
     if(grade == None):
         return students
     # finds index of selected student, and overwrites the index with the student dict
