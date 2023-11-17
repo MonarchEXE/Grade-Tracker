@@ -46,6 +46,7 @@ def NewStudentMenu() -> None:
 
 def AverageGradesMenu() -> None:
     CreateBarrier()
+    print('Grade Averages Menu.')
     print('Select an option:')
     print('    1. Find average grades per student.')
     print('    2. Find average grades per subject.')
@@ -74,6 +75,7 @@ def AverageGradesMenu() -> None:
 
 def AccessGradesMenu():
     CreateBarrier()
+    print('Student Grades Menu.')
     print('Select an option:')
     print('    1. Alter a student\'s subject grade.')
     print('    2. Display all student\'s grades.')
@@ -100,6 +102,7 @@ def AccessGradesMenu():
 
 def SaveData():
     CreateBarrier()
+    print('Save/Load Data Menu.')
     print('Select an option:')
     print('    1. Save current changes to student datasheets.')
     print('    2. Load previous student datasheets.')
@@ -124,9 +127,13 @@ def SaveData():
             pass
     MainMenu()
 
-def MainMenu() -> None:
+def StartMenu():
     CreateBarrier()
     print('Welcome to Student Grade Tracker!')
+    gtFile.CreatePath()
+def MainMenu():
+    CreateBarrier()
+    print('Main Menu.')
     print('Select an option: ')
     print('    1. Create a new student datasheet.')
     print('    2. Access a student\'s datasheet.')
@@ -157,5 +164,5 @@ def MainMenu() -> None:
         case 0:
             return
 
-gtFile.CreatePath()
+StartMenu()
 MainMenu()
