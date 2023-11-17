@@ -13,7 +13,6 @@ def CreatePath() -> None:
         _prevdir = ConnectPath()
         _stream = open(saveFile, 'w+') # creates new text file for student grades
         CloseSave(_stream, _prevdir)
-    print(os.getcwd())
 
 def ConnectPath() -> None:
     prevdir = os.getcwd() #
