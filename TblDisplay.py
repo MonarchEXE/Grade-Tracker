@@ -57,3 +57,18 @@ def DisplayAvgs(students, title, function) -> None:
     for subject, grade in gradeAvgs.items():
         GradeBar(subject, grade)
     print(xBar)
+
+def DisplayGrades(students, _func):
+    student = _func(students)
+    if(student == None):
+        print('\nStudent not found.\n')
+        return
+    xBar = HorizontalBar()
+    titleBar = VerticalBar(student.get('name'))
+
+    print(xBar)
+    print(titleBar)
+    print(xBar)
+    for subject, grade in student['grades'].items():
+        GradeBar(subject, grade)
+    print(xBar)

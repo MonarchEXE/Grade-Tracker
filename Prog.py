@@ -95,7 +95,7 @@ def AccessGradesMenu():
         case 1:
             gtDict.AlterStudentGrade(currentStudents)
         case 2:
-            gtDict.GetStudentGrades(currentStudents)
+            gtDisplay.DisplayGrades(currentStudents, gtDict.GetStudent)
         case 0:
             pass
     MainMenu()

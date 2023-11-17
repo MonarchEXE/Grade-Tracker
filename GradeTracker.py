@@ -1,9 +1,5 @@
 import InputValidation as GradeIn
 
-def StudentAvgs(students) -> dict:
-    for student in students:
-        StudentAvg(student)
-    return
 def StudentAvg(student) -> int:
     # function that tallies all grades of a given student and calculates average
     # no return, just prints the name of student and their grade average
