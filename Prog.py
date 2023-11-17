@@ -55,10 +55,10 @@ def AverageGradesMenu() -> None:
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input.')
+            print('Invalid input.\n')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice.')
+            print('Enter a valid choice.\n')
             continue
     match choice:
         case 1:
@@ -83,10 +83,10 @@ def AccessGradesMenu():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input.')
+            print('Invalid input.\n')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice.')
+            print('Enter a valid choice.\n')
             continue
     match choice:
         case 1:
@@ -109,18 +109,18 @@ def SaveData():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input.')
+            print('Invalid input.\n')
             continue
         if(choice < 0 or choice > 2):
-            print('Enter a valid choice.')
+            print('Enter a valid choice.\n')
             continue
     match choice:
         case 1:
             gtFile.SaveData(currentStudents)
-            print('Current datasheets saved.\n')
+            print('\nCurrent datasheets saved.\n')
         case 2:
             gtFile.LoadData(currentStudents)
-            print('Previous datasheets loaded from save directory.\n')
+            print('\nPrevious datasheets loaded from save directory.\n')
         case 0:
             pass
     MainMenu()
@@ -144,10 +144,10 @@ def MainMenu():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input.')
+            print('Invalid input.\n')
             continue
         if(choice < 0 or choice > 4):
-            print('Enter a valid choice.')
+            print('Enter a valid choice.\n')
             continue
     match choice:
         case 1:
