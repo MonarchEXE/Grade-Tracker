@@ -1,32 +1,5 @@
 import InputValidation as GradeIn
 
-def StudentAvg(student) -> int:
-    # function that tallies all grades of a given student and calculates average
-    # no return, just prints the name of student and their grade average
-    #DELETE
-    totalGrade = 0
-    i = 0
-    for grade in student['grades']:
-        try:
-            totalGrade += int(student['grades'][grade])
-        except:
-            print('Error')
-        i += 1
-    print('Average grade of %s: %s' % (student.get('name'), (totalGrade/i)))
-    return
-
-def SubjectAvg(subject, students) -> int:
-    # function to collect avg subject grade per student
-    # 'students' parameters are all student dicts w/ corresponding 'subject'
-    # e.g., all students have 'Physics' as a tracked subject 
-    # DELETE  
-    totalGrade = 0
-    i = 0
-    for grade in students:
-        totalGrade += students[grade][subject]
-        i = i + 1
-    return (totalGrade/i)
-
 def CreateStudent(name, subjects) -> dict:
     newDict = {
         'name' : name,
@@ -64,13 +37,6 @@ def UpdateGrade(student, subject, grade) -> None:
     print('\nGrade updated\n')
     return student
 
-def GetStudentGrades(students):
-    # DELETE
-    student = GetStudent(students) 
-    if(student == None):
-        print('Student not found.')
-        return
-    print(student['grades'])
 def GetStudent(students) -> dict:
     # locates the student of given name from list 'students' 
     # students parameter is a list of 'student' dictionaries 
