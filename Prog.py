@@ -34,14 +34,13 @@ def NewStudentMenu() -> None:
     stdName = input('Enter student\'s name (leave empty to exit): ')
     if(stdName != ''):        
         subjects = []
-        print('Enter subject title: ')
+        print('Enter subject title (leave empty to exit): ')
         while(True):
             subject = input('')
             if(subject == ''):
                 break
             subjects.append(subject)
         currentStudents.append(gtDict.CreateStudent(stdName, subjects))    
-        print('Student datasheet created')
     MainMenu()
 
 def AverageGradesMenu() -> None:
@@ -57,7 +56,7 @@ def AverageGradesMenu() -> None:
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input')
+            print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
             print('Enter a valid choice')
@@ -86,7 +85,7 @@ def AccessGradesMenu():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input')
+            print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
             print('Enter a valid choice')
@@ -113,7 +112,7 @@ def SaveData():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input')
+            print('Invalid input.')
             continue
         if(choice < 0 or choice > 2):
             print('Enter a valid choice')
@@ -147,7 +146,7 @@ def MainMenu():
         try:
             choice = int(input('Enter Option: '))
         except:
-            print('Invalid input')
+            print('Invalid input.')
             continue
         if(choice < 0 or choice > 4):
             print('Enter a valid choice')
